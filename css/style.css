@@ -186,8 +186,8 @@ nav a {
   text-align: center;
 }
 
-/*-*-*-*-*-*-*.about-me*-*-*-*-*-*-*/
-.about-me {
+/*-*-*-*-*-*-*.about-me && .skills*-*-*-*-*-*-*/
+.about-me, .skills {
   position: relative;
   width: 100vw;
   height: 70vh;
@@ -214,6 +214,8 @@ nav a {
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
   padding: 3rem 3rem;
 }
+
+/*-*-*-*-*-*-*.about-me*-*-*-*-*-*-*/
 
 .about-me .rectangle {
   position: absolute;
@@ -259,4 +261,40 @@ nav a {
 .highlight {
   color: var(--main-color);
   font-weight: bold;
+}
+
+/*-*-*-*-*-*-*.skills*-*-*-*-*-*-*/
+.skills .rectangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.skills .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skills h2 {
+  position: absolute;
+  top: 0;
+  left: 24rem;
+}
+
+.skill {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill:nth-child(-n+2) {
+  border-right: 4px dashed var(--main-color);
+}
+
+.skill p {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 170%;
 }
