@@ -185,3 +185,78 @@ nav a {
 .buttons {
   text-align: center;
 }
+
+/*-*-*-*-*-*-*.about-me*-*-*-*-*-*-*/
+.about-me {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  margin-bottom: 3rem;
+}
+
+.rectangle {
+  background-color: var(--shadow);
+  width: 70%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  box-sizing: border-box;
+  background-color: white;
+  width: 86vw;
+  min-width: 86vw;
+  height: 45vh;
+  position: absolute;
+  top: 12.5vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+  padding: 3rem 3rem;
+}
+
+.about-me .rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.about-me .content {
+  display: flex;
+}
+
+.about-me h2 {
+  position: absolute;
+  top: 0;
+  left: 8.4rem;
+}
+.picture {
+  flex: 1;
+}
+
+.picture img {
+ border-radius: 50%;
+}
+
+.info {
+  flex: 2;
+  align-self: center;
+  border-right: 4px dashed var(--main-color);
+}
+
+.info ul li {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+}
+
+.description {
+  flex: 4;
+  line-height: 170%;
+  padding-left: 1.5rem;
+  align-self: center;
+}
+
+.highlight {
+  color: var(--main-color);
+  font-weight: bold;
+}
