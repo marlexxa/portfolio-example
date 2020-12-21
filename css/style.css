@@ -1,0 +1,63 @@
+:root {
+  --main-color: #ffc53d;
+  --side-color: #ff9a3d;
+  --shadow: #fafaff;
+  --copyright: #a0a0a0
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+html {
+  font-size: 18px;
+  font-family: Raleway, sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+/*-*-*-*-*-*-*<header>*-*-*-*-*-*-*/
+header {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*-------------<nav>-------------*/
+nav {
+  margin: 2.5rem .6rem .5rem 3rem;
+  max-height: 2rem;
+  font-weight: bold;
+}
+
+nav .home {
+  font-size: 1.3rem;
+  float: left;
+  position: relative;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+.home a {
+  position: absolute;
+  top: 0;
+  padding-left: .5rem;
+ }
+
+.menu a {
+  padding: 1rem;
+}
+
