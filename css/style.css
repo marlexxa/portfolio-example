@@ -215,6 +215,11 @@ nav a {
   padding: 3rem 3rem;
 }
 
+.highlight {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
 /*-*-*-*-*-*-*.about-me*-*-*-*-*-*-*/
 
 .about-me .rectangle {
@@ -256,11 +261,6 @@ nav a {
   line-height: 170%;
   padding-left: 1.5rem;
   align-self: center;
-}
-
-.highlight {
-  color: var(--main-color);
-  font-weight: bold;
 }
 
 /*-*-*-*-*-*-*.skills*-*-*-*-*-*-*/
