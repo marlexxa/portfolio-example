@@ -67,7 +67,7 @@ a[href*="github"] div {
 }
 
 /*-------------buttons-------------*/
-.big-button {
+.big-button, .small-button {
   display: inline-block;
   cursor: pointer;
   margin: 0 2.2rem;
@@ -80,6 +80,11 @@ a[href*="github"] div {
 
 .big-button {
   width: 200px;
+  height: 50px;
+}
+
+.small-button {
+  width: 100px;
   height: 50px;
 }
 
@@ -334,4 +339,106 @@ nav a {
 .project img {
   width: 100%;
   height: 100%;
+}
+
+/*-*-*-*-*-*-*.contact*-*-*-*-*-*-*/
+.contact {
+  margin-top: 4rem;
+  width: 100vw;
+  height: 110vh;
+  position: relative;
+}
+
+.contact .rectangle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact h2 {
+  position: absolute;
+  top: 0;
+  left: 8.4rem;
+}
+
+.contact-form {
+  position: absolute;
+  top: 4rem;
+  margin: 0 7%;
+  width: 86%;
+  height: 90vh;
+  display: flex;
+}
+
+.contact-info {
+  padding: 2rem 3rem;
+  background-color: var(--side-color);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
+  flex: 2;
+  position: relative;
+}
+
+.contact-info p {
+  color: white;
+}
+
+.contact-info > p {
+  line-height: 1.7rem;
+  padding-top: 2rem;
+  display: block;
+  width: 70%;
+}
+
+.container-down {
+  font-family: Ubuntu, sans-serif;
+  position: absolute;
+  bottom: 2rem;
+}
+
+.address p {
+  line-height: 1.3rem;
+}
+
+.address p:first-child {
+  font-weight: bold;
+  padding-top: .5rem;
+}
+
+.form-area {
+  flex: 3;
+  padding: 2rem 2.5rem;
+  background-color: white;
+}
+
+.form-area p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-area form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+}
+
+.form-area input {
+  flex: 1;
+  background-color: var(--shadow);
+  font-family: Ubuntu, sans-serif;
+  border-radius: 15px;
+  margin: .5rem 0; 
+  height: 2rem;
+  padding: 0 1.5rem;
+  border: none;
+}
+
+.form-area input[type=msg-from] {
+  flex: 3;
+}
+
+.form-area input[type=submit] {
+  align-self: flex-end;
 }
