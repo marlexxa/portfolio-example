@@ -21,8 +21,17 @@ body {
   box-sizing: border-box;
 }
 
+
+/*-------------common------------*/
 ul {
   list-style: none;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 1rem 0;
 }
 
 /*-------------social-media-bar-------------*/
@@ -55,6 +64,23 @@ a[href*="github"] div {
 .fa-github {
   vertical-align: 10%;
   color: white;
+}
+
+/*-------------buttons-------------*/
+.big-button {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 2.2rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, var(--side-color), var(--main-color));
+  color: white;
+}
+
+.big-button {
+  width: 200px;
+  height: 50px;
 }
 
 /*-*-*-*-*-*-*<header>*-*-*-*-*-*-*/
@@ -141,4 +167,21 @@ nav a {
   color: white;
   font-size: 2rem;
   font-weight: bold;
+}
+
+/*-*-*-*-*-*-.more-info-*-*-*-*-*-*/
+.more-info {
+  width: 100vw;
+  height: 35vh;
+  background-color: white;
+}
+
+.more-info p {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.buttons {
+  text-align: center;
 }
