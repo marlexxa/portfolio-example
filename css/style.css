@@ -442,3 +442,16 @@ nav a {
 .form-area input[type=submit] {
   align-self: flex-end;
 }
+
+/*-*-*-*-*-*-<footer>-*-*-*-*-*-*/
+.copyright {
+  height: 4.5rem;
+  text-align: center;
+}
+
+.copyright p {
+  font-family: Ubuntu, sans-serif;
+  font-size: .93rem;
+  color: var(--copyright);
+  padding: 1.7rem 0;
+}
