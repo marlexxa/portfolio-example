@@ -244,7 +244,6 @@ nav a {
   left: 50%;
   transform: translate(-50%, 0);
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
-  padding: 3rem 3rem;
 }
 
 .highlight {
@@ -270,30 +269,41 @@ nav a {
   left: 8.4rem;
 }
 .picture {
+  padding: 3rem 0 0 3rem;
   flex: 1;
 }
 
 .picture img {
- border-radius: 50%;
+  min-height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
 }
 
 .info {
+  padding: 3rem ;
   flex: 2;
   align-self: center;
   border-right: 4px dashed var(--main-color);
+  padding: 0 1rem;
 }
 
-.info ul li {
-  margin: 0.5rem 0;
-  padding: 0.25rem 0;
+.info ul {
+  min-height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .description {
+  padding: .5rem 3rem .5rem 1.5rem;
+  max-height: 90%;
   flex: 4;
   line-height: 170%;
-  padding-left: 1.5rem;
   align-self: center;
+  display: flex;
+  overflow: auto;
 }
+
 
 /*-*-*-*-*-*-*.skills*-*-*-*-*-*-*/
 .skills .rectangle {
@@ -304,7 +314,8 @@ nav a {
 
 .skills .content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 3rem 0rem;
 }
 
 .skills h2 {
@@ -319,6 +330,7 @@ nav a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 .5rem;
 }
 
 .skill:nth-child(-n+2) {
