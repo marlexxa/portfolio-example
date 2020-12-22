@@ -78,7 +78,8 @@ a[href*="github"] div {
 }
 
 /*-------------buttons-------------*/
-.big-button, .small-button {
+.big-button,
+.small-button {
   display: inline-block;
   cursor: pointer;
   border: none;
@@ -98,7 +99,8 @@ a[href*="github"] div {
   height: 50px;
 }
 
-.big-button:hover, .small-button:hover {
+.big-button:hover,
+.small-button:hover {
   animation: btn-animation .2s;
 }
 
@@ -106,15 +108,19 @@ a[href*="github"] div {
   0% {
     --gradient-direction: to right;
   }
+
   25% {
     --gradient-direction: to top;
   }
+
   50% {
     --gradient-direction: to left;
   }
+
   75% {
     --gradient-direction: to bottom;
   }
+
   100% {
     --gradient-direction: to right
   }
@@ -133,7 +139,7 @@ header {
 nav {
   margin: 2.5rem .6rem .5rem 3rem;
   font-weight: bold;
-  display: flex;  
+  display: flex;
 }
 
 nav .home {
@@ -158,7 +164,7 @@ nav a {
   position: absolute;
   top: 0;
   padding-left: .5rem;
- }
+}
 
 .menu a {
   padding: 1rem;
@@ -170,6 +176,7 @@ nav a {
     flex-direction: column;
     align-items: flex-end;
   }
+
   .menu li {
     margin: .3rem 0rem;
   }
@@ -193,10 +200,10 @@ nav a {
   background-image: url("../images/cover-photo.png");
   background-size: cover;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.welcome .container > * {
+.welcome .container>* {
   z-index: 10;
 }
 
@@ -225,6 +232,7 @@ nav a {
   .welcome .container h1 {
     font-size: 4rem;
   }
+
   .welcome .container p {
     font-size: 1.5rem;
   }
@@ -234,10 +242,12 @@ nav a {
   .welcome .container h1 {
     font-size: 2.5rem;
   }
+
   .welcome .container p {
     font-size: 1rem;
   }
 }
+
 /*-*-*-*-*-*-.more-info-*-*-*-*-*-*/
 .more-info {
   width: 100vw;
@@ -268,6 +278,7 @@ nav a {
     flex-direction: column;
     align-items: center;
   }
+
   .more-info p {
     font-size: 1.5rem;
   }
@@ -280,7 +291,8 @@ nav a {
 }
 
 /*-*-*-*-*-*-*.about-me && .skills*-*-*-*-*-*-*/
-.about-me, .skills {
+.about-me,
+.skills {
   width: 100vw;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -356,7 +368,7 @@ nav a {
   justify-content: space-around;
 }
 
-.description {  
+.description {
   flex: 3;
   margin: .5rem 1rem;
   line-height: 170%;
@@ -368,10 +380,12 @@ nav a {
   .about-me .container .content {
     flex-direction: column;
   }
+
   .info {
     border-right: none;
     padding-bottom: 1rem;
   }
+
   .description {
     border-top: 4px dashed var(--main-color);
     padding-top: 1rem;
@@ -423,15 +437,16 @@ nav a {
   .skills .container .content {
     flex-direction: column;
   }
+
   .skill:nth-child(-n+2) {
     border-right: none;
     border-bottom: 4px dashed var(--main-color);
   }
+
   .skill {
     padding: 1rem 0;
     margin: 0 2.5rem;
   }
-
 }
 
 /*-*-*-*-*-*-*.portfolio*-*-*-*-*-*-*/
@@ -447,12 +462,11 @@ nav a {
 }
 
 .projects .project {
-  overflow: hidden;
+  position: relative;
 }
 
 .project:nth-child(1) {
   grid-column: 1/span 3;
-  position: relative;
 }
 
 .project:nth-child(2) {
@@ -468,9 +482,8 @@ nav a {
 }
 
 .project:nth-child(5) {
-   grid-column: 3/span 6;
-   position: relative;
- }
+  grid-column: 3/span 6;
+}
 
 .project img {
   width: 100%;
@@ -483,6 +496,7 @@ nav a {
 }
 
 .project .wrapper {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -491,8 +505,8 @@ nav a {
   padding: 1.5rem 0 0 2rem;
   color: white;
   background: linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, rgba(255, 154, 61, 0.5) 100%);
+  display: none;
 }
-
 
 .wrapper h3 {
   font-size: 2.2rem;
@@ -500,8 +514,13 @@ nav a {
 }
 
 .wrapper p {
-  margin: .3rem 3rem 1.3rem 0;
+  box-sizing: border-box;
+  /* padding: .3rem 3rem 1.3rem 0; */
   max-width: 24rem;
+}
+
+.project:hover .wrapper {
+  display: block;
 }
 
 /************RWD*************/
@@ -510,18 +529,31 @@ nav a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+
   .projects .project {
     grid-column: span 1;
   }
+
   .project:nth-child(5) {
     grid-column: span 2;
-  } 
+  }
 }
 
-@media only screen and (max-width: 600px) {
- .project .wrapper {
-   display: none;
- }
+@media only screen and (max-width: 650px) {
+  .project .wrapper h3 {
+    display: none;
+  }
+
+  .project .wrapper p {
+    display: none;
+  }
+
+  .project .wrapper button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*-*-*-*-*-*-*.contact*-*-*-*-*-*-*/
@@ -616,7 +648,7 @@ nav a {
   background-color: var(--shadow);
   box-sizing: border-box;
   padding: .75rem 1.5rem;
-  margin: .5rem 0; 
+  margin: .5rem 0;
   border: none;
   border-radius: 15px;
   font-family: Ubuntu, sans-serif;
@@ -646,4 +678,3 @@ input:not([type=submit]):focus {
   font-size: .93rem;
   font-family: Ubuntu, sans-serif;
 }
-
