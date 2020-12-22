@@ -204,8 +204,9 @@ nav a {
 /*-*-*-*-*-*-.more-info-*-*-*-*-*-*/
 .more-info {
   width: 100vw;
-  height: 35vh;
+  min-height: 35vh;
   background-color: white;
+  flex-direction: column;
 }
 
 .more-info p {
@@ -216,6 +217,7 @@ nav a {
 
 .buttons {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 /*-*-*-*-*-*-*.about-me && .skills*-*-*-*-*-*-*/
