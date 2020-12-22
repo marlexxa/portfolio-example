@@ -511,7 +511,7 @@ nav a {
 
 .wrapper p {
   box-sizing: border-box;
-  /* padding: .3rem 3rem 1.3rem 0; */
+  padding: .3rem 3rem 1.3rem 0;
   max-width: 24rem;
 }
 
