@@ -9,7 +9,7 @@ Zobacz [demo](https://marlexxa.github.io/portfolio-example/) projektu.
 W projekcie wykorzystano wyłącznie technologie HTML oraz CSS. Wykorzystano takie zaganienia jak box-model, flexbox, grid, position (absolute, relative), keyframes. Arkusz styli tworzono wykazując się znajomością selektorów CSS oraz kaskadowością. Zostały użyte zewnętrzne czcionki google fonts oraz ikony fontawesome.
 
 ### Responsywność
-Stworzona strona jest w pełni responsywna. Interfesjs strony dla szerokości ekranu powyżej 1024px możesz zobaczyć [tutaj](./.github/images/big-device.png), dla szerokości poniżej 1024px i powyżej 650px [tutaj](./.github/images/middle-device.png), a dla szerokości ekranu poniżej 650px [tutaj](./.github/images/small-device.png). Dodatkowo dla szerokości ekranu poniżej 650px w sekcji porfolio nie pojawiają się szczegółowe opisy projektów, jedynie przycisk odsyłający do repozytorium.
+Stworzona strona jest w pełni responsywna. Interfesjs strony dla szerokości ekranu powyżej 1024px możesz zobaczyć [tutaj](https://raw.githubusercontent.com/marlexxa/portfolio-example/main/.github/images/big-device.png), dla szerokości poniżej 1024px i powyżej 650px [tutaj](https://raw.githubusercontent.com/marlexxa/portfolio-example/main/.github/images/middle-device.png), a dla szerokości ekranu poniżej 650px [tutaj](https://raw.githubusercontent.com/marlexxa/portfolio-example/main/.github/images/small-device.png). Dodatkowo dla szerokości ekranu poniżej 650px w sekcji porfolio nie pojawiają się szczegółowe opisy projektów, jedynie przycisk odsyłający do repozytorium.
 
 ### Budowa strony
 Główną sekcją strony jest strona powitalna, na której programista wita się z odbiorcą. Na górze tej karty znajduje się nawigacja, która odsyła użytkownika do pozostałych sekcji.
