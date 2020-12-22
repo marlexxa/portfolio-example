@@ -11,6 +11,10 @@
   max-width: 100%;
 }
 
+*,*:focus {
+  outline: none;
+}
+
 html {
   font-size: 18px;
   font-family: Raleway, sans-serif;
@@ -443,6 +447,11 @@ nav a {
   align-self: flex-end;
 }
 
+input:not([type=submit]):focus {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: all .2s ease-in-out;
+}
+
 /*-*-*-*-*-*-<footer>-*-*-*-*-*-*/
 .copyright {
   height: 4.5rem;
@@ -455,3 +464,4 @@ nav a {
   color: var(--copyright);
   padding: 1.7rem 0;
 }
+
