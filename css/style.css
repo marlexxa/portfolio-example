@@ -39,6 +39,11 @@ h2 {
   padding: 1rem 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 /*-------------social-media-bar-------------*/
 .media {
   display: flex;
@@ -86,7 +91,6 @@ a[href*="github"] div {
 .big-button {
   width: 200px;
   height: 50px;
-  margin: 0 2.2rem;
 }
 
 .small-button {
@@ -128,20 +132,21 @@ header {
 /*-------------<nav>-------------*/
 nav {
   margin: 2.5rem .6rem .5rem 3rem;
-  max-height: 2rem;
   font-weight: bold;
+  display: flex;  
 }
 
 nav .home {
+  flex: 1;
   font-size: 1.3rem;
   float: left;
   position: relative;
 }
 
 nav .menu {
+  flex: 4;
   display: flex;
   justify-content: flex-end;
-  flex: 1;
 }
 
 nav a {
@@ -159,6 +164,17 @@ nav a {
   padding: 1rem;
 }
 
+/************RWD*************/
+@media only screen and (max-width: 650px) {
+  nav .menu {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .menu li {
+    margin: .3rem 0rem;
+  }
+}
+
 /*-------------.welcome-------------*/
 .cover-layer {
   width: 100%;
@@ -173,24 +189,26 @@ nav a {
 }
 
 .welcome {
+  flex: 3;
   background-image: url("../images/cover-photo.png");
   background-size: cover;
   position: relative;
-  overflow: hidden;
-  display: flex;
-  flex: 3;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5rem;
+  overflow: hidden; 
 }
 
-.welcome > * {
+.welcome .container > * {
   z-index: 10;
 }
 
-.welcome h1 {
-  margin-top: 1rem;
+.welcome .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.welcome .container h1 {
+  margin: 3rem 0 1.5rem 0;
   color: var(--main-color);
   font-size: 5.5rem;
   font-weight: bold;
@@ -202,6 +220,24 @@ nav a {
   font-weight: bold;
 }
 
+/************RWD*************/
+@media only screen and (max-width: 650px) {
+  .welcome .container h1 {
+    font-size: 4rem;
+  }
+  .welcome .container p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .welcome .container h1 {
+    font-size: 2.5rem;
+  }
+  .welcome .container p {
+    font-size: 1rem;
+  }
+}
 /*-*-*-*-*-*-.more-info-*-*-*-*-*-*/
 .more-info {
   width: 100vw;
@@ -217,16 +253,38 @@ nav a {
 }
 
 .buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding-bottom: 1rem;
+}
+
+.buttons .big-button {
+  margin: .5rem 2.2rem;
+}
+
+/************RWD*************/
+@media only screen and (max-width: 650px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .more-info p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .more-info p {
+    font-size: 1rem;
+  }
 }
 
 /*-*-*-*-*-*-*.about-me && .skills*-*-*-*-*-*-*/
 .about-me, .skills {
-  position: relative;
   width: 100vw;
-  height: 70vh;
+  padding-bottom: 3rem;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .rectangle {
@@ -237,21 +295,25 @@ nav a {
 }
 
 .content {
-  box-sizing: border-box;
   background-color: white;
-  width: 86vw;
-  min-width: 86vw;
-  height: 45vh;
-  position: absolute;
-  top: 12.5vh;
-  left: 50%;
-  transform: translate(-50%, 0);
+  max-width: 86vw;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .highlight {
   color: var(--main-color);
   font-weight: bold;
+}
+
+.container .content {
+  box-sizing: border-box;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*-*-*-*-*-*-*.about-me*-*-*-*-*-*-*/
@@ -262,51 +324,65 @@ nav a {
   left: 0;
 }
 
-.about-me .content {
-  display: flex;
-}
-
-.about-me h2 {
-  position: absolute;
-  top: 0;
-  left: 8.4rem;
-}
-.picture {
-  padding: 3rem 0 0 3rem;
-  flex: 1;
-}
-
-.picture img {
-  min-height: 100px;
-  min-width: 100px;
-  border-radius: 50%;
+.about-me .container h2 {
+  padding-left: 7vw;
 }
 
 .info {
-  padding: 3rem ;
   flex: 2;
-  align-self: center;
+  margin: .5rem 1rem;
+  padding-right: 1rem;
   border-right: 4px dashed var(--main-color);
-  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  flex: 1;
+  align-self: flex-start;
+  margin: 1rem 1rem;
+}
+
+.picture img {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
 }
 
 .info ul {
-  min-height: 33vh;
+  flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.description {
-  padding: .5rem 3rem .5rem 1.5rem;
-  max-height: 90%;
-  flex: 4;
+.description {  
+  flex: 3;
+  margin: .5rem 1rem;
   line-height: 170%;
-  align-self: center;
   display: flex;
-  overflow: auto;
 }
 
+/************RWD*************/
+@media only screen and (max-width: 1024px) {
+  .about-me .container .content {
+    flex-direction: column;
+  }
+  .info {
+    border-right: none;
+    padding-bottom: 1rem;
+  }
+  .description {
+    border-top: 4px dashed var(--main-color);
+    padding-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .info {
+    flex-direction: column;
+  }
+}
 
 /*-*-*-*-*-*-*.skills*-*-*-*-*-*-*/
 .skills .rectangle {
@@ -315,16 +391,13 @@ nav a {
   right: 0;
 }
 
-.skills .content {
-  display: flex;
+.skills .container .content {
   justify-content: space-between;
   padding: 3rem 0rem;
 }
 
-.skills h2 {
-  position: absolute;
-  top: 0;
-  left: 24rem;
+.skills .container h2 {
+  padding-left: 35%;
 }
 
 .skill {
@@ -346,6 +419,21 @@ nav a {
   line-height: 170%;
 }
 
+@media only screen and (max-width: 650px) {
+  .skills .container .content {
+    flex-direction: column;
+  }
+  .skill:nth-child(-n+2) {
+    border-right: none;
+    border-bottom: 4px dashed var(--main-color);
+  }
+  .skill {
+    padding: 1rem 0;
+    margin: 0 2.5rem;
+  }
+
+}
+
 /*-*-*-*-*-*-*.portfolio*-*-*-*-*-*-*/
 .portfolio h2 {
   text-align: center;
@@ -356,6 +444,9 @@ nav a {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 1fr 1fr;
+}
+
+.projects .project {
   overflow: hidden;
 }
 
@@ -402,6 +493,7 @@ nav a {
   background: linear-gradient(180deg, rgba(34, 34, 34, 0.5) 0%, rgba(255, 154, 61, 0.5) 100%);
 }
 
+
 .wrapper h3 {
   font-size: 2.2rem;
   font-weight: bold;
@@ -412,11 +504,31 @@ nav a {
   max-width: 24rem;
 }
 
+/************RWD*************/
+@media only screen and (max-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .projects .project {
+    grid-column: span 1;
+  }
+  .project:nth-child(5) {
+    grid-column: span 2;
+  } 
+}
+
+@media only screen and (max-width: 600px) {
+ .project .wrapper {
+   display: none;
+ }
+}
+
 /*-*-*-*-*-*-*.contact*-*-*-*-*-*-*/
 .contact {
-  margin-top: 4rem;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
   width: 100vw;
-  height: 110vh;
   position: relative;
 }
 
@@ -428,26 +540,23 @@ nav a {
   left: 0;
 }
 
-.contact h2 {
-  position: absolute;
-  top: 0;
-  left: 8.4rem;
+.contact .container h2 {
+  padding-left: 7%;
 }
 
 .contact-form {
-  position: absolute;
-  top: 4rem;
-  margin: 0 7%;
+  align-self: center;
   width: 86%;
-  height: 90vh;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-info {
-  padding: 2rem 3rem;
-  background-color: var(--side-color);
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
   flex: 2;
+  background-color: var(--side-color);
+  box-sizing: border-box;
+  padding: 2rem 2.5rem;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -459,12 +568,12 @@ nav a {
 
 .container-up {
   flex: 1;
+  margin-bottom: 2rem;
 }
 
 .container-up p {
-  flex: 1;
   line-height: 1.7rem;
-  padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .container-down {
@@ -486,8 +595,9 @@ nav a {
 
 .form-area {
   flex: 3;
-  padding: 2rem 2.5rem;
   background-color: white;
+  box-sizing: border-box;
+  padding: 2rem 2.5rem;
 }
 
 .form-area p {
@@ -499,22 +609,21 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 90%;
 }
 
 .form-area input {
   flex: 1;
   background-color: var(--shadow);
-  font-family: Ubuntu, sans-serif;
-  border-radius: 15px;
+  box-sizing: border-box;
+  padding: .75rem 1.5rem;
   margin: .5rem 0; 
-  height: 2rem;
-  padding: 0 1.5rem;
   border: none;
+  border-radius: 15px;
+  font-family: Ubuntu, sans-serif;
 }
 
 .form-area input[type=msg-from] {
-  flex: 3;
+  min-height: 10rem;
 }
 
 .form-area input[type=submit] {
@@ -528,14 +637,13 @@ input:not([type=submit]):focus {
 
 /*-*-*-*-*-*-<footer>-*-*-*-*-*-*/
 .copyright {
-  height: 4.5rem;
   text-align: center;
 }
 
 .copyright p {
-  font-family: Ubuntu, sans-serif;
-  font-size: .93rem;
-  color: var(--copyright);
   padding: 1.7rem 0;
+  color: var(--copyright);
+  font-size: .93rem;
+  font-family: Ubuntu, sans-serif;
 }
 
